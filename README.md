@@ -1,8 +1,28 @@
-# React + Vite
+# dev-to-clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a clone of [dev.to](https://dev.to) built using
+[React.js](https://react.dev) and [tailwindCSS](https://tailwindcss.com)
 
-Currently, two official plugins are available:
+## Run the application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository
+
+```bash
+git clone https://github.com/lalitmee/dev-to-clone.git
+```
+
+2. Install the dependecies
+
+```bash
+npm install
+```
+
+3. Run the server
+
+```bash
+npm run dev
+```
+
+---
+
+<p style="text-align: center;">Thank You</p>
