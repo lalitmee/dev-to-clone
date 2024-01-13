@@ -61,8 +61,32 @@ const links = [
   },
   {
     id: 2,
-    label: "Trash",
-    iconClass: "fa fa-trash",
+    label: "Podcasts",
+    iconClass: "fa fa-microphone",
+    count: 0,
+  },
+  {
+    id: 3,
+    label: "Videos",
+    iconClass: "fa fa-video-camera",
+    count: 200,
+  },
+  {
+    id: 4,
+    label: "Tags",
+    iconClass: "fa fa-tag",
+    count: 0,
+  },
+  {
+    id: 5,
+    label: "FAQ",
+    iconClass: "fa fa-question",
+    count: 200,
+  },
+  {
+    id: 6,
+    label: "About",
+    iconClass: "fa fa-user",
     count: 0,
   },
 ];
@@ -71,7 +95,7 @@ function App() {
   return (
     <div className="w-full bg-gray-200">
       <Navbar />
-      <div className="flex p-4">
+      <div className="w-8/12 mx-auto flex p-4 gap-4">
         <Sidebar links={links} />
         <Posts posts={posts} />
       </div>

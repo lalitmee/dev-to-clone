@@ -6,12 +6,12 @@ const Sidebar = ({ links }) => {
       {links.map((link) => (
         <li
           key={link.id}
-          className="hover:underline hover:text-white p-2 w-full hover:bg-blue-500 rounded cursor-pointer"
+          className="relative hover:bg-blend-hue hover:underline hover:text-white p-2 w-full hover:bg-blue-300 rounded cursor-pointer"
         >
           <span className="text-lg">
             <i className={link.iconClass}></i>
           </span>
-          <span className="ml-3">{link.label}</span>
+          <span className="ml-3 absolute left-6 inset-2.5">{link.label}</span>
         </li>
       ))}
     </ul>

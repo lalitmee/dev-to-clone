@@ -1,19 +1,30 @@
 import PropTypes from "prop-types";
 
+const tabs = [
+  { label: "Relevant", value: "relevant" },
+  { label: "Latest", value: "latest" },
+  { label: "Top", value: "top" },
+];
+
 const Posts = ({ posts }) => {
   return (
     <div className="w-8/12">
-      <div className="flex gap-2 items-center">
-        <div>Relevant</div>
-        <div>Latest</div>
-        <div>Top</div>
+      <div className="flex gap-4 items-center my-4">
+        {tabs.map((tab) => (
+          <button
+            key={tab.value}
+            className={`text-lg "active:font-bold" hover:text-blue-500`}
+          >
+            {tab.label}
+          </button>
+        ))}
       </div>
       {posts.map((post) => (
-        <div key={post.id} className="rounded bg-white mb-4">
+        <div key={post.id} className="rounded-xl bg-white mb-4">
           <img
             src={post.imgSrc}
             alt="post-thumbnail"
-            className="rounded-t-md"
+            className="rounded-t-xl"
           />
           <div className="flex items-start gap-4 p-4">
             <img
@@ -28,12 +39,12 @@ const Posts = ({ posts }) => {
                 <div>{post.user.name}</div>
                 <div>{post.posted}</div>
               </div>
-              <h3 className="text-lg font-bold">{post.title}</h3>
+              <h3 className="text-4xl font-bold">{post.title}</h3>
               <div className="flex gap-4 items-center">
                 {post.tags.map((tag) => (
                   <button
                     key={tag}
-                    className="rounded px-2 py-1 hover:border hover:border-gray-300 hover:bg-gray-300"
+                    className="rounded px-2 py-1 border border-white hover:border-gray-300 hover:bg-gray-100"
                   >
                     #{tag}
                   </button>
